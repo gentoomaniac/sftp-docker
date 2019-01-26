@@ -2,7 +2,7 @@
 
 src_files = preseed.sh
 image_name = sftp-docker
-gcr_location = eu.gcr.io/<project_id>
+gcr_location = eu.gcr.io/prefab-galaxy-202620
 build_tag = build-${BUILD_NUMBER}
 
 clean-local-builds:
