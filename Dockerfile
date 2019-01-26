@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update -y && \
-    apt-get install -y ssh
+    apt-get install -y ssh rsync
 
 RUN mkdir -p /sftp/run && \
     chown sshd /sftp
