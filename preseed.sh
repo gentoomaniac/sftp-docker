@@ -65,7 +65,7 @@ USER_BASE_DIR='/sftp/users'
 USER_CREATE_ARGS="--no-create-home --shell /usr/sbin/nologin --comment sftp-user --gid ${SFTP_USERS_GROUP}"
 for dir in "${USER_BASE_DIR}"/*; do
     NAME="${dir##*/}"
-    if id "${NAME}" 2>&1 >/dev/null; then
+    if id "${NAME}" >/dev/null 2>&1 ; then
         echo "User ${NAME} already exists."
     else
         USER_HOME="$(head -n 1 ${USER_BASE_DIR}/${NAME}/home_dir 2>/dev/null)"
