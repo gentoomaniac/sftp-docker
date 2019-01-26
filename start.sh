@@ -1,0 +1,1 @@
+docker run --rm -p 222 -v "$(pwd)/authorized_keys:/sftp/:ro" -v "$(pwd)/data/:/sftp/root/:ro" -v "$(pwd)seed_file:/tmp/seed-file" sftp --seed=/tmp/seed-file
