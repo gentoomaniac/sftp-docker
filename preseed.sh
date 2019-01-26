@@ -68,9 +68,9 @@ for dir in "${USER_BASE_DIR}"/*; do
     if id "${NAME}" >/dev/null 2>&1 ; then
         echo "User ${NAME} already exists."
     else
-        USER_HOME="$(head -n 1 ${USER_BASE_DIR}/${NAME}/home_dir 2>/dev/null)"
-        USER_UID="$(head -n 1 ${USER_BASE_DIR}/${NAME}/uid 2>/dev/null)"
-        USER_GIDS="$(head -n 1 ${USER_BASE_DIR}/${NAME}/gids 2>/dev/null)"
+        USER_HOME="$(head -n 1 "${USER_BASE_DIR}/${NAME}/home_dir" 2>/dev/null)"
+        USER_UID="$(head -n 1 "${USER_BASE_DIR}/${NAME}/uid" 2>/dev/null)"
+        USER_GIDS="$(head -n 1 "${USER_BASE_DIR}/${NAME}/gids" 2>/dev/null)"
 
         ARGS="${USER_CREATE_ARGS}"
         if [ ! -z "${USER_HOME}" ]; then
